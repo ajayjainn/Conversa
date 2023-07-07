@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.conversa.SignInFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.conversa.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.conversa.HomeFragment"
+        android:label="Conversa"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.conversa.ChatFragment"
+        android:label="ChatFragment" >
+        <argument
+            android:name="users_username"
+            app:argType="string" />
+        <argument
+            android:name="receivers_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.conversa.SearchFragment"
+        android:label="Search username"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <argument
+            android:name="users_username"
+            app:argType="string" />
+    </fragment>
+</navigation>

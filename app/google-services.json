@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "126969968903",
+    "project_id": "conversa-4e91a",
+    "storage_bucket": "conversa-4e91a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126969968903:android:353f3aec98f3692f1a2da2",
+        "android_client_info": {
+          "package_name": "com.example.conversa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126969968903-030m49f8cg42je95f3dsgc9f9lt6oao3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeQXLT00BJu4UYKbbl4LW2R8B7nD91g-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126969968903-030m49f8cg42je95f3dsgc9f9lt6oao3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
